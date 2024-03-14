@@ -163,27 +163,7 @@ const openTask = (e) => {
   }
 };
 
-// const deletetask = () => {
-//   if (!e) e = window.event;
 
-//   const targetId = e.target.getAttribute("name");
-//   const type = e.target.tagName;
-//   // console.log(type)
-//   const removetask = state.tasklist.filter(({ id }) => id !== targetId);
-//   state.tasklist = removetask;
-
-//   // console.log(removetask)
-//   updateLocalStorage();
-//   if (type === "BUTTON") {
-//     console.log(e.target.parentNode.parentNode.parentNode);
-//     return e.target.parentNode.parentNode.parentNode.parentNode.removechild(
-//       e.target.parentNode.parentNode.parentNode
-//     );
-//   }
-//   return e.target.parentNode.parentNode.parentNode.parentNode.removechild(
-//     e.target.parentNode.parentNode.parentNode
-//   );
-// };
 const deletetask = (e) => {
   if (!e) e = window.event;
 
@@ -206,110 +186,7 @@ editButtons.forEach((button) => {
   });
 });
 
-// const editTask = (e) => {
-//   if (!e) e = window.event;
-//   const targetId = e.target.id;
-//   const type = e.target.tagName;
 
-//   let parentNode;
-//   let taskTitle;
-//   let taskdescription;
-//   let tags;
-//   let submission;
-
-//   if (type == -"BUTTON") {
-//     parentNode = e.target.parentNode.parentNode;
-//   } else {
-//     parentNode = e.target.parentNode.parentNode.parentNode;
-//   }
-
-//   // taskTitle=parentNode.childNodes[3];
-//   // console.log(taskTitle);
-
-//   taskTitle = parentNode.childNodes[3].childNodes[3];
-
-//   taskdescription = parentNode.childNodes[3].childNodes[5];
-//   tags = parentNode.childNodes[3].childNodes[7].childNodes[1];
-
-//   submitButton = parentNode.childNodes[5].childNodes[1];
-
-//   taskTitle.setAttribute("contenteditable", "true");
-//   taskdescription.setAttribute("ontenteditable", "true");
-//   tags.setAttribute("ontenteditable", "true");
-
-//   submitButton.setAttribute("onclick", "saveedit.apply(this,arguments)");
-//   submitButton.removeAttribute("data-bs-toggle");
-//   submitButton.removeAttribute("data-bs-target");
-//   submitButton.innerHTML = "save Changes";
-// };
-
-// const saveedit = (e) => {
-//   if (!e) e = window.event;
-
-//   const targetId = e.target.id;
-//   const parentNode = e.target.parentNode.parentNode;
-
-//   const task_title = parentNode.childNodes[3].childNodes[3];
-//   const description = parentNode.childNodes[3].childNodes[5];
-//   const tags = parentNode.childNodes[3].childNodes[7].childNodes[1];
-//   const submitButton = parentNode.childNodes[5].childNodes[1];
-
-//   const updateData = {
-//     task_title: task_title.innerHTML,
-//     taskdescription: updateData.taskdescription,
-//     tags: updateData.tags,
-//     url: task.url,
-//   };
-//   let statecopy = state.tasklist;
-
-//   statecopy = statecopy.map((task) =>
-//     task.id === targetId
-//       ? {
-//           id: task.id,
-//           title: updateData.task_title,
-//           description: updateData.taskdescription,
-//           tags: updateData.tags,
-//           url: task,
-//           url,
-//         }
-//       : task
-//   );
-
-//   state.tasklist = statecopy;
-//   updateLocalStorage();
-// };
-
-// const editTask = (e) => {
-//   if (!e) e = window.event;
-//   const targetId = e.target.getAttribute("name");
-//   const type = e.target.tagName;
-
-//   let parentNode;
-//   let taskTitle;
-//   let taskDescription;
-//   let tags;
-//   let submitButton;
-
-//   if (type === "BUTTON") {
-//     parentNode = e.target.parentNode.parentNode;
-//   } else {
-//     parentNode = e.target.parentNode.parentNode.parentNode;
-//   }
-
-//   taskTitle = parentNode.querySelector(".card-title");
-//   taskDescription = parentNode.querySelector(".card-text");
-//   tags = parentNode.querySelector(".tags .badge");
-//   submitButton = parentNode.querySelector(".btn-outline-info");
-
-//   taskTitle.setAttribute("contenteditable", "true");
-//   taskDescription.setAttribute("contenteditable", "true");
-//   tags.setAttribute("contenteditable", "true");
-
-//   submitButton.setAttribute("onclick", "saveedit.apply(this,arguments)");
-//   submitButton.removeAttribute("data-bs-toggle");
-//   submitButton.removeAttribute("data-bs-target");
-//   submitButton.textContent = "Save Changes";
-// };
 const editTask = (e) => {
   if (!e) e = window.event;
   const taskCard = e.target.closest(".col-md-6");
