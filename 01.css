@@ -1,0 +1,29 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  background-color: #060b13 !important;
+  color: rgb(255, 255, 255);
+}
+
+.but_for_ph_only {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 15px 10px;
+  background-color: white;
+  width: 100%;
+  z-index: 3;
+}
+
+@media (min-width: 768px) {
+  .but_for_ph_only {
+    display: none;
+  }
+}
+
+#home {
+  color: #060b13;
+}
